@@ -1,6 +1,7 @@
 
   {
-      "name": "Media Production Agency Website",
+      "name": "TOT",
+      "homepage": "https://vjth8129.github.io/TOT",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
