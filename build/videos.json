@@ -1,0 +1,82 @@
+{
+  "showreel": {
+    "title": "SHOWREEL",
+    "videoUrl": "https://images.unsplash.com/photo-1683089906941-3dc61665e7d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU5NjU2MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "label": "Our Latest Showreel 2024",
+    "duration": "2:30"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Desert Cycling Adventure",
+      "category": "youtube",
+      "type": "YouTube Video",
+      "duration": "5:30",
+      "client": "Cycling Brand",
+      "videoUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWNsaW5nJTIwZGVzZXJ0JTIwdmlkZW98ZW58MXx8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A cinematic journey through the desert showcasing the beauty of cycling in extreme conditions.",
+      "thumbnail": "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWNsaW5nJTIwZGVzZXJ0JTIwdmlkZW98ZW58MXx8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": 2,
+      "title": "Urban Lifestyle Series",
+      "category": "social",
+      "type": "Social Media",
+      "duration": "1:15",
+      "client": "Lifestyle Brand",
+      "videoUrl": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGxpZmVzdHlsZSUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Dynamic social media content capturing the essence of modern urban living.",
+      "thumbnail": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGxpZmVzdHlsZSUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": 3,
+      "title": "Corporate Documentary",
+      "category": "documentary",
+      "type": "Documentary",
+      "duration": "12:45",
+      "client": "Tech Company",
+      "videoUrl": "https://images.unsplash.com/photo-1683089906941-3dc61665e7d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU5NjU2MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Behind-the-scenes look at innovation and technology in the modern workplace.",
+      "thumbnail": "https://images.unsplash.com/photo-1683089906941-3dc61665e7d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU5NjU2MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": 4,
+      "title": "Fashion Commercial",
+      "category": "commercial",
+      "type": "Commercial",
+      "duration": "0:30",
+      "client": "Fashion Brand",
+      "videoUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwY29tbWVyY2lhbCUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "High-end fashion commercial showcasing the latest collection with cinematic flair.",
+      "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwY29tbWVyY2lhbCUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": 5,
+      "title": "Food & Culture Series",
+      "category": "youtube",
+      "type": "YouTube Video",
+      "duration": "8:20",
+      "client": "Food Network",
+      "videoUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwY3VsdHVyZSUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Exploring local cuisine and cultural traditions through visual storytelling.",
+      "thumbnail": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwY3VsdHVyZSUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "id": 6,
+      "title": "Tech Innovation Spot",
+      "category": "commercial",
+      "type": "Commercial",
+      "duration": "0:45",
+      "client": "Tech Startup",
+      "videoUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwaW5ub3ZhdGlvbiUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Showcasing cutting-edge technology and its impact on everyday life.",
+      "thumbnail": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwaW5ub3ZhdGlvbiUyMHZpZGVvfGVufDF8fHwxNzU5OTY1MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    }
+  ],
+  "hero": {
+    "backgroundImage": "https://images.unsplash.com/photo-1632670535530-aaf6e90042ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwdmlkZW8lMjBwcm9kdWN0aW9uJTIwc3R1ZGlvJTIwZmlsbW1ha2VyfGVufDF8fHx8MTc1OTgxMTEzN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    "title": "Bringing Stories to Life",
+    "subtitle": "One Frame at a Time",
+    "description": "We create high-quality commercials, corporate videos, social media content, and more, bringing your ideas to life with expert storytelling."
+  }
+}

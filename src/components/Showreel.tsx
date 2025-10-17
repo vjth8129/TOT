@@ -1,54 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-
-interface ShowreelVideo {
-  id: number;
-  title: string;
-  videoUrl: string;
-  embedUrl: string;
-  thumbnail: string;
-  category: string;
-}
+import { useVideoData } from '../hooks/useVideoData';
 
 export function Showreel() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [featuredVideo, setFeaturedVideo] = useState<ShowreelVideo | null>(null);
   const [isInView, setIsInView] = useState(false);
   const [shouldStick, setShouldStick] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  // Fetch showreel video data from public JSON
-  useEffect(() => {
-    const fetchShowreelVideo = async () => {
-      try {
-        // Try to fetch from JSON file first (for easy updates after deployment)
-        const response = await fetch('/videos.json');
-        
-        if (response.ok) {
-          const data = await response.json();
-          if (data.showreel) {
-            setFeaturedVideo(data.showreel);
-            return;
-          }
-        }
-      } catch (error) {
-        console.log('JSON file not available, using default showreel video');
-      }
-      
-      // Use default/fallback video if fetch fails
-      setFeaturedVideo({
-        id: 1,
-        title: "Professional Film Production",
-        videoUrl: "https://youtu.be/K_ffJVoX2ig",
-        embedUrl: "https://www.youtube.com/embed/K_ffJVoX2ig?autoplay=1&mute=1&loop=1&playlist=K_ffJVoX2ig&controls=0&showinfo=0&rel=0&modestbranding=1",
-        thumbnail: "https://images.unsplash.com/photo-1618256506572-4c3a7082e4c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcHJvZHVjdGlvbiUyMHN0dWRpbyUyMGJlaGluZCUyMHNjZW5lc3xlbnwxfHx8fDE3NTk4MTEwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        category: "Behind the Scenes"
-      });
-    };
-
-    fetchShowreelVideo();
-  }, []);
+  
+  // Use the video data hook
+  const { videoData, loading, error } = useVideoData();
 
   useEffect(() => {
     let ticking = false;
@@ -123,7 +85,7 @@ export function Showreel() {
   const cardScale = 0.8 + scrollProgress * 0.2; // Subtle scale animation
 
   // Show loading state while fetching video data
-  if (!featuredVideo) {
+  if (loading || !videoData) {
     return (
       <div className="relative bg-black overflow-hidden min-h-screen flex items-center justify-center">
         <div className="text-white/40 text-lg">Loading showreel...</div>
@@ -208,25 +170,13 @@ export function Showreel() {
             }}
             className="absolute left-1/2 top-1/2 overflow-hidden shadow-2xl transform-gpu bg-black"
           >
-            {/* YouTube Video Embed */}
+            {/* Video Content */}
             {showVideo ? (
               <>
-                <iframe
-                  src={featuredVideo.embedUrl}
-                  className="w-full h-full"
-                  title={featuredVideo.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ 
-                    border: 'none',
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    width: '100%',
-                    height: '100%',
-                    transform: 'translate(-50%, -50%)',
-                    objectFit: 'cover'
-                  }}
+                <img
+                  src={videoData?.showreel?.videoUrl || "https://images.unsplash.com/photo-1683089906941-3dc61665e7d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU5NjU2MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080"}
+                  alt={videoData?.showreel?.label || "Showreel"}
+                  className="w-full h-full object-cover"
                 />
                 {/* Transparent overlay to prevent context menu */}
                 <div 
@@ -236,11 +186,33 @@ export function Showreel() {
                 />
               </>
             ) : (
-              <img 
-                src={featuredVideo.thumbnail} 
-                alt={featuredVideo.title}
-                className="w-full h-full object-cover"
-              />
+              <>
+                <img 
+                  src={videoData?.showreel?.videoUrl || "https://images.unsplash.com/photo-1683089906941-3dc61665e7d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBiZWhpbmQlMjBzY2VuZXN8ZW58MXx8fHwxNzU5NjU2MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080"} 
+                  alt={videoData?.showreel?.label || "Showreel"}
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                  <motion.button
+                    onClick={() => setShowVideo(true)}
+                    className="bg-red-600/90 hover:bg-red-700 text-white rounded-full p-6 transition-all duration-300 shadow-2xl hover:scale-110 backdrop-blur-sm border-2 border-white/20"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <svg className="w-12 h-12 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </motion.button>
+                </div>
+                
+                {/* Video Info */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-white text-lg font-semibold mb-1">{videoData?.showreel?.label || "Our Latest Showreel 2024"}</h3>
+                  <p className="text-white/80 text-sm">{videoData?.showreel?.duration || "2:30"}</p>
+                </div>
+              </>
             )}
 
             {/* Video effects overlay - optimized */}

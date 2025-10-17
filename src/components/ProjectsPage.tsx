@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { VideoModal } from './VideoModal';
 import { ArrowLeft, Play, Calendar, User, Tag } from 'lucide-react';
@@ -20,19 +20,35 @@ export function ProjectsPage({ onBack }: ProjectsPageProps) {
   useEffect(() => {
     const loadProjects = async () => {
       try {
-        // Try to fetch from JSON file first (for easy updates after deployment)
-        const response = await fetch('/projects.json');
+        // Try to fetch from videos.json file first (for easy updates after deployment)
+        const response = await fetch('/videos.json');
         
         if (response.ok) {
           const data = await response.json();
           const projects = data.projects || [];
           
           if (projects.length > 0) {
-            setAllProjects(projects);
+            // Transform the data to match Project interface
+            const transformedProjects = projects.map((p: any) => ({
+              id: p.id,
+              title: p.title,
+              category: p.category,
+              type: p.type,
+              duration: p.duration,
+              client: p.client,
+              videoUrl: p.videoUrl,
+              thumbnail: p.thumbnail,
+              description: p.description,
+              embedUrl: p.videoUrl, // Use videoUrl as embedUrl for now
+              year: "2024",
+              tags: [p.type, p.category]
+            }));
+            
+            setAllProjects(transformedProjects);
             
             // Extract unique categories dynamically
             const uniqueCategories = Array.from(
-              new Set(projects.map((p: Project) => p.category))
+              new Set(transformedProjects.map((p: Project) => p.category))
             ).sort();
             setCategories(["All", ...uniqueCategories]);
             setIsLoading(false);
@@ -40,7 +56,7 @@ export function ProjectsPage({ onBack }: ProjectsPageProps) {
           }
         }
       } catch (error) {
-        console.log('JSON file not available, using imported data');
+        console.log('videos.json file not available, using imported data');
       }
       
       // Use imported data as fallback
