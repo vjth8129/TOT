@@ -1,0 +1,68 @@
+{
+  "showreel": {
+    "id": 1,
+    "title": "Professional Film Production",
+    "videoUrl": "https://youtu.be/K_ffJVoX2ig",
+    "embedUrl": "https://www.youtube.com/embed/K_ffJVoX2ig?autoplay=1&mute=1&loop=1&playlist=K_ffJVoX2ig&controls=0&showinfo=0&rel=0&modestbranding=1",
+    "thumbnail": "https://images.unsplash.com/photo-1618256506572-4c3a7082e4c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcHJvZHVjdGlvbiUyMHN0dWRpbyUyMGJlaGluZCUyMHNjZW5lc3xlbnwxfHx8fDE3NTk4MTEwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    "category": "Behind the Scenes"
+  },
+  "services": [
+    {
+      "id": "pre-production",
+      "type": "Pre-Production",
+      "name": "Pre-Production Showcase",
+      "description": "Discover how we plan and prepare every detail before production begins. From concept development to location scouting, we ensure your project starts on the right foot.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "production",
+      "type": "Production",
+      "name": "Production Excellence",
+      "description": "Watch our professional cinematography and multi-camera setups in action. See how we bring your vision to life with top-tier equipment and expertise.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "post-production",
+      "type": "Post-Production",
+      "name": "Post-Production Magic",
+      "description": "Experience the transformation of raw footage into polished content. Our editing, color correction, and VFX bring stories to life.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "digital-marketing",
+      "type": "Digital Marketing",
+      "name": "Digital Marketing Strategies",
+      "description": "Learn how we amplify your message through strategic digital marketing campaigns and data-driven content creation.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "brand-development",
+      "type": "Brand Development",
+      "name": "Brand Identity Creation",
+      "description": "See how we build strong, memorable brand identities that resonate with your target audience and stand out in the market.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "web-development",
+      "type": "Web Development",
+      "name": "Web Development Solutions",
+      "description": "Explore our custom website development process, creating stunning, responsive sites that deliver exceptional user experiences.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "mobile-app-development",
+      "type": "Mobile App Development",
+      "name": "Mobile App Innovation",
+      "description": "Discover how we bring your ideas to mobile platforms with native and cross-platform app development.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    },
+    {
+      "id": "consulting-services",
+      "type": "Consulting Services",
+      "name": "Strategic Consulting",
+      "description": "Get insights into our expert guidance for digital transformation, process optimization, and strategic business growth.",
+      "videoUrl": "https://youtu.be/K_ffJVoX2ig"
+    }
+  ]
+}
